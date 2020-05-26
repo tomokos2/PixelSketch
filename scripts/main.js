@@ -1,5 +1,7 @@
 // Grid Setup -- load once for first load
 let loaded = false;
+
+let painting = false;
 if (!loaded) {
     setUpGrid();
     setUpMenu();
@@ -24,7 +26,7 @@ function setUpGrid() {
         // Keep record of which number box it is
         box.setAttribute('id', i.toString());
 
-        box.classList.add('grid-box');
+        box.classList.add('gridBox');
         container.appendChild(box);
 
     }
@@ -43,6 +45,23 @@ function setUpGrid() {
         if (colorRadios[i].checked) {
             setPaints(colorRadios[i]);
         }
+    }
+
+    let icon = document.querySelector("#paintbrush");
+
+    container.addEventListener("click", (e) => {
+        painting = !painting;
+        if (!painting) {
+            icon.classList.add("hide");
+        } else {
+            icon.classList.remove("hide");
+        }
+    });
+
+    if (!painting) {
+        icon.classList.add("hide");
+    } else {
+        icon.classList.remove("hide");
     }
 
     // Report that it has loaded
@@ -96,7 +115,7 @@ function setUpMenu() {
 
 // Adds borders to each grid box
 function addBorders() {
-    const boxes = document.getElementsByClassName("grid-box");
+    const boxes = document.getElementsByClassName("gridBox");
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].classList.add("border");
     }
@@ -104,7 +123,7 @@ function addBorders() {
 
 // Removes the borders from each grid box
 function removeBorders() {
-    const boxes = document.getElementsByClassName("grid-box");
+    const boxes = document.getElementsByClassName("gridBox");
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].classList.remove("border");
     }
@@ -123,10 +142,12 @@ function setPaints(target) {
 // Change the paint color to whatever the selected color is
 function setColorPaint(color) {
     // Box background color will listen for hover and change to that color
-    const boxes = document.getElementsByClassName("grid-box");
+    const boxes = document.getElementsByClassName("gridBox");
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].addEventListener('mouseover', (e) => {
-            e.target.style.background = color;
+            if (painting) {
+                e.target.style.background = color;
+            }
         });
     }
 }
@@ -134,11 +155,13 @@ function setColorPaint(color) {
 // Change the paint color to random colors with each box
 function setRainbowPaint() {
     // Box background color will listen for hover and change to a random color
-    const boxes = document.getElementsByClassName("grid-box");
+    const boxes = document.getElementsByClassName("gridBox");
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].addEventListener('mouseover', (e) => {
-            let randomColor = getRandColor();
-            e.target.style.background = randomColor;
+            if (painting) {
+                let randomColor = getRandColor();
+                e.target.style.background = randomColor;
+            }
         });
     }
 }
