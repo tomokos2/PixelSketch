@@ -1,0 +1,125 @@
+:root {
+    --grid-width-sq: 16;
+}
+
+body {
+    display: flex;
+    background-color: mintcream;
+}
+
+.button {
+    background-color: #FFF280;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button:hover {
+    cursor:pointer;
+    background-color: #FFFCC9; /* Highlight button when hovering */
+}
+
+.grid-wrap {
+    border: 4px solid lightslategrey;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    height: 960px;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-width-sq), 1fr); /* Create grid with designated witdth */
+}
+
+div.grid-box {
+    border: none;
+    background-color: white;
+}
+
+.border {
+    border: 1px solid grey !important;
+}
+
+.text {
+    font: bold 30px arial,sans-serif;
+}
+
+.errorText {
+    font: 20px arial,sans-serif;
+    color: red;
+}
+
+.wrap {
+    margin: 20px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 100px;
+    height: 2em;
+}
+
+#main {
+    padding-left: 420px;
+    text-align: center;
+    width: 100%;
+}
+
+#menu {
+    padding-left: 20px;
+    height: 100%; /* Full height */
+    width: 400px;
+    position: fixed; /* Stay in place on scroll */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+#description {
+    margin-top: 200px;
+    background-color: #ACDF87;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+#textWrap {
+    margin: 20px;
+}
+
+#sizeInput {
+    width: 70px;
+    height: 50px;
+    font-size: 30px;
+    margin: auto;
+}
+
+#sizeScript {
+    display: flex;
+    justify-items: center;
+}
+
+#newSizeSelection {
+    background-color: #DCB239;
+    margin-top: 20px;
+    overflow: auto;
+}
+
+#sizeSubmit {
+    margin-bottom: 20px;
+}
+
+#newColorSelection {
+    background-color: #8FD8D2;
+    border-radius: 5px;
+}
+
+#borderSelection {
+    margin-top: 20px;
+    background-color: #FEDCD2;
+    border-radius: 5px;
+}
+
+#other {
+    margin-top: 100px;
+}

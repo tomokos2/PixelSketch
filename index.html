@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelSketch</title>
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!--Customization menu begin-->
+    <div id="menu">
+
+        <!--Introduction text begin-->
+        <div id="description">
+            <p id="textWrap" class="text">
+                Drag your mouse across the grid to color it.
+                <br>Try changing the paint colors and have fun!
+            </p>
+        </div>
+        <!--Introduction text end-->
+
+        <!--New grid creation box begin-->
+        <div id="newSizeSelection">
+            <div class="wrap">
+                <div id="sizeScript">
+                    <p class="text">Enter side length:</p>
+                    <input type="number" id="sizeInput" step="1" maxlength="2" placeholder="16">
+                </div>
+                <div id="errorMsg" class=errorText></div>
+                <div class="button text" id="sizeSubmit">Create New Grid</div>
+            </div>
+        </div>
+        <!--New grid creation box end-->
+
+        <!--Other customization tools begin-->
+        <div id="other">
+
+            <p class="text">Other options:</p>
+            <!--Radio button form to choose paint color begin-->
+            <form id="colorForm">
+                <div id="newColorSelection">
+                    <input class="radio" type="radio" id="radioBlack" name="color" value="black" checked>
+                    <label class="text" for="radioBlack">Black Paint</label><br>
+
+                    <input class="radio" type="radio" id="radioBlue" name="color" value="blue" checked>
+                    <label class="text" for="radioBlue">Blue Paint</label><br>
+
+                    <input class="radio" type="radio" id="radioYellow" name="color" value="yellow" checked>
+                    <label class="text" for="radioYellow">Yellow Paint</label><br>
+
+                    <input class="radio" type="radio" id="radioRed" name="color" value="red" checked>
+                    <label class="text" for="radioRed">Red Paint</label><br>
+
+                    <input class="radio" type="radio" id="radioPink" name="color" value="pink" checked>
+                    <label class="text" for="radioPink">Pink Paint</label><br>
+    
+                    <input class="radio" type="radio" id="radioGreen" name="color" value="green" checked>
+                    <label class="text" for="radioGreen">Green Paint</label><br>
+
+                    <input class="radio" type="radio" id="radioColorful" name="color" value="color">
+                    <label class="text" for="radioColorful">Colorful Paint</label><br>
+                </div>
+            </form>
+            <!--Radio button form to choose paint color end-->
+    
+            <!--Radio button form to decide whether to add a border or not-->
+            <form id="borderForm">
+                <div id="borderSelection">
+                    <input class="radio" type="radio" id="border" name="border" value="true" checked>
+                    <label class="text" for="border">Border</label><br>
+                    <input class="radio" type="radio" id="noBorder" name="border" value="false">
+                    <label class="text" for="noBorder">No Border</label><br>
+                </div>
+            </form>
+            <!--End of radio button border form-->
+        </div>
+        <!--Other customization toos end-->
+
+    </div>
+    <!--Customization menu end-->
+
+    <!--Grid start-->
+    <div id="main">
+        <div class="grid-wrap" id="canvas"></div>
+    </div>
+    <!--Grid end-->
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
