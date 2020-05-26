@@ -1,0 +1,105 @@
+:root {
+    --grid-width-sq: 16;
+}
+
+body {
+    display: flex;
+    background-color: mintcream;
+}
+
+.button {
+    background-color: Aliceblue;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    cursor:pointer;
+}
+
+.grid-wrap {
+    padding-left: 160px;
+    margin: auto;
+    padding-top: 200px;
+    width: 960px;
+    height: 960px;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-width-sq), 1fr);
+}
+
+div.grid-box {
+    border: none;
+    background-color: white;
+}
+
+.border {
+    border: 1px solid grey !important;
+}
+
+.text {
+    font: bold 30px arial,sans-serif;
+}
+
+.errorText {
+    font: 20px arial,sans-serif;
+    color: red;
+}
+
+.wrap {
+    margin: 20px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 100px;
+    height: 2em;
+}
+
+#menu {
+    padding-left: 20px;
+    height: 100%; /* Full height */
+    width: 400px;
+    position: fixed; /* Stay in place on scroll */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+#sizeInput {
+    width: 70px;
+    height: 50px;
+    font-size: 30px;
+    margin: auto;
+}
+
+#sizeScript {
+    display: flex;
+    justify-items: center;
+}
+
+#newSizeSelection {
+    background-color: #DCB239;
+    margin-top: 200px;
+    overflow: auto;
+}
+
+#sizeSubmit {
+    margin-bottom: 20px;
+}
+
+#newColorSelection {
+    background-color: #8FD8D2;
+    border-radius: 5px;
+}
+
+#borderSelection {
+    margin-top: 20px;
+    background-color: #FEDCD2;
+    border-radius: 5px;
+}
+
+#other {
+    margin-top: 100px;
+}

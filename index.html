@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelSketch</title>
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="menu">
+        <div id="newSizeSelection">
+            <div class="wrap">
+                <div id="sizeScript">
+                    <p class="text">Enter side length:</p>
+                    <input type="number" id="sizeInput" step="1" maxlength="2" placeholder="16">
+                </div>
+                <div id="errorMsg" class=errorText></div>
+                <div class="button text" id="sizeSubmit">Create New Grid</div>
+            </div>
+        </div>
+
+        <div id="other">
+            <p class="text">Other options:</p>
+            <form id="colorForm">
+                <div id="newColorSelection">
+                    <input class="radio" type="radio" id="radioBlack" name="color" value="black" checked>
+                    <label class="text" for="radioBlack">Black Paint</label><br>
+    
+                    <input class="radio" type="radio" id="radioColorful" name="color" value="color">
+                    <label class="text" for="radioColorful">Colorful Paint</label><br>
+                </div>
+            </form>
+    
+            <form id="borderForm">
+                <div id="borderSelection">
+                    <input class="radio" type="radio" id="border" name="border" value="true" checked>
+                    <label class="text" for="border">Border</label><br>
+                    <input class="radio" type="radio" id="noBorder" name="border" value="false">
+                    <label class="text" for="noBorder">No Border</label><br>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="grid-wrap" id="canvas">
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

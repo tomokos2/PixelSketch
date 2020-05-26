@@ -1,1 +1,1 @@
-# PIxelSketch
+# PixelSketch
