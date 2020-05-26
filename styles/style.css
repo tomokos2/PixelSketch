@@ -21,6 +21,7 @@ body {
 
 .gridWrap {
     border: 4px solid lightslategrey;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 960px;
@@ -127,7 +128,6 @@ input[type=radio] {
 #other {
     margin-top: 100px;
 }
-
 #paintbrush {
     width: 20px;
 }
